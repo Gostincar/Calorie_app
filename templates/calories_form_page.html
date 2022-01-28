@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static\main.css">
+</head>
+<body>
+<h2>Calorie calculator</h2>
+<p>Enter!</p>
+<form action="/calories_form" method="post">
+
+    {{caloriesform.weight.label}} {{caloriesform.weight}}
+    <br>
+    {{caloriesform.height.label}} {{caloriesform.height}}
+    <br>
+    {{caloriesform.age.label}} {{caloriesform.age}}
+    <br>
+    <hr>
+    <p>Weather <br> enter where are you staying </p>
+    {{caloriesform.city.label}} {{caloriesform.city}}
+    <br>
+    {{caloriesform.country.label}} {{caloriesform.country}}
+    <br>
+
+    <br>
+    {{caloriesform.button}}
+    <br>
+    {% if result==True %}
+    <h3>You need {{calories}} calories today!</h3>
+     <h4>Temperature is   {{temperature}} </h4>
+    {% endif %}
+</form>
+</body>
+</html>
